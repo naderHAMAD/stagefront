@@ -1,0 +1,30 @@
+<br>
+<h4 class="text-center">La liste des taches pour l'instance <b>{{this.id}}</b></h4>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th> Id tache </th>
+            <th> Name </th>
+            <th> Actions </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let i of range">
+
+            <td>{{ch[i]}}</td>
+            <td>{{name1[i]}}</td>
+            <td>
+                <button title="Faire tache" style="margin-left:10px ;" class="btn btn-success" (click)="doTask(ch[i],name1[i]);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check-lg" viewBox="0 0 16 16">
+                        <path
+                            d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                    </svg>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

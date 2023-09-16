@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>bpmn-js connectors extension demo</title>
+  <link rel="stylesheet" href="vendor/bpmn-js/dist/assets/diagram-js.css" />
+  <link rel="stylesheet" href="vendor/bpmn-js/dist/assets/bpmn-js.css" />
+  <link rel="stylesheet" href="vendor/bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css" />
+  <link rel="stylesheet" href="vendor/bpmn-js-properties-panel/dist/assets/properties-panel.css" />
+  <link rel="stylesheet" href="vendor/bpmn-js-properties-panel/dist/assets/element-templates.css" />
+  <link rel="stylesheet" href="vendor/@ibm/plex/css/ibm-plex.min.css" />
+</head>
+
+<body>
+  
+
+  <div class="canvas-parent">
+    <div class="canvas" id="canvas">
+      <div class="drop-message"><strong>Hint:</strong> Drop diagram to open.</div>
+
+      <div class="links top-links">
+        <button type="button" onclick="history.go(-1)" class="btn btn-outline-secondary">Retour</button>
+      </div>
+    </div>
+
+    <div class="properties-panel" id="properties-panel"></div>
+
+    <div class="links bottom-links">
+      <button class="link" id="download-button">Download Diagram</button>
+    </div>
+    <div id="downloadInstructions" style="display: none;">
+      <p>Cliquez avec le bouton droit sur le lien ci-dessous et choisissez "Enregistrer le lien sous..." pour sélectionner l'emplacement de téléchargement.</p>
+    </div>
+  </div>
+
+  <div class="error-panel hidden">
+    <button class="toggle">Close</button>
+    <pre></pre>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

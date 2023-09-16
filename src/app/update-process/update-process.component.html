@@ -1,0 +1,53 @@
+<div class="col-md-8 offset-md-3">
+    <p></p>
+<h3 style="color: orange ;">Modifier Workflow</h3>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <p>
+        <label> Name</label>
+        <input type="text" class="form-control" id="name"
+        [(ngModel)] = "process.name" name="name"></p>
+    </div>
+    <div class="form-group">
+        <p>
+        <label> Container ID</label>
+        <input type="text" class="form-control" id="container_id"
+        [(ngModel)] = "process.container_id" name="container_id"></p>
+    </div>
+    
+    <div class="form-group">
+        <p>
+        <label class=""> Process ID</label>
+    
+        <input type="text" class="form-control" id="process_id"
+        [(ngModel)] = "process.process_id" name="process_id"></p>
+    </div>
+     <div class="form-group">
+        <p>
+            <label class="btn btn-default p-0">
+                <input type="file" (change)="selectFile($event)"/>
+            </label>
+        </p>
+     </div>
+     <div class="col-4">
+        <button class="btn btn-success btn-sm" [disabled]="!selectedFiles" (click)="upload()">
+          Upload
+        </button>
+      </div>
+      <div *ngIf="currentFile" class="progress my-3">
+        <div
+          class="progress-bar progress-bar-info progress-bar-striped"
+          role="progressbar"
+          attr.aria-valuenow="{{ progress }}"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          [ngStyle]="{ width: progress + '%' }"
+        >
+          {{ progress }}%
+        </div>
+      </div>
+      <p><br><br>
+    <button class="btn btn-dark" [disabled]="!(progress==100)" type="submit">Valider</button></p>
+
+</form>
+</div>
